@@ -2,11 +2,11 @@ stages:
   - playwright-test
 
 test:
-  image: mcr.microsoft.com/playwright:v1.40.0-jammy
+  image: mcr.microsoft.com/playwright:v1.43.1-jammy
   stage: playwright-test
   script:
     - npm install
-    - npm run test
+    - npm run test -- --workers=4
     - ls -R
   when: manual
   artifacts:

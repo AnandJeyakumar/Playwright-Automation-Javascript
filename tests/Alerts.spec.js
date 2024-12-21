@@ -34,7 +34,7 @@ await page.waitForTimeout(5000);
 
 
 
-test.only("Prompt Dialog alert  with Ok and cancel",async ({page})=>{
+test("Prompt Dialog alert  with Ok and cancel",async ({page})=>{
 
     await page.goto("https://testautomationpractice.blogspot.com/")
 

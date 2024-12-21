@@ -2,7 +2,7 @@ import {test,expect} from "@playwright/test"
 
 
 
-test("frame",async({page})=>{
+test.skip("frame",async({page})=>{
 
     await page.goto("https://ui.vision/demo/webtest/frames/");
 

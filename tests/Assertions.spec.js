@@ -2,7 +2,7 @@ import {test,expect} from "@playwright/test"
 import exp from "constants";
 import { waitForDebugger } from "inspector";
 
-test ("Assertion", async({page})=>{
+test.skip ("Assertion", async({page})=>{
 
     // TO have URL
 

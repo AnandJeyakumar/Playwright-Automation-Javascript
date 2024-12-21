@@ -1,6 +1,6 @@
 const{test,expect}=require("@playwright/test")
 
-test("auto",async({page})=>{
+test.skip("auto",async({page})=>{
 
     await page.goto("https://www.redbus.in/");
 

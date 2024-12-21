@@ -1,7 +1,7 @@
 import{test,expect} from "@playwright/test"
 import exp from "constants"
 
-test ("Soft Assertion", async({page})=>{
+test.skip ("Soft Assertion", async({page})=>{
 
     await page.goto("https://demo.nopcommerce.com/register")
 

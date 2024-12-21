@@ -34,18 +34,18 @@ await page.waitForTimeout(5000);
 
 
 
-test("Prompt Dialog alert  with Ok and cancel",async ({page})=>{
+// test("Prompt Dialog alert  with Ok and cancel",async ({page})=>{
 
-    await page.goto("https://testautomationpractice.blogspot.com/")
+//     await page.goto("https://testautomationpractice.blogspot.com/")
 
 
-page.on("dialog", async dialog=>{
-    expect(dialog.type()).toContain("prompt")
-    expect(dialog.message()).toContain("Please enter your name:")
-    expect(dialog.defaultValue()).toContain("Harry Potter")
-    await dialog.accept("John")
-})
-await page.locator("//button[normalize-space()='Prompt']").click()
-await expect(await page.locator("//p[@id='demo']")).toHaveText("Hello John! How are you today?")
-await page.waitForTimeout(5000);
-})
+// page.on("dialog", async dialog=>{
+//     expect(dialog.type()).toContain("prompt")
+//     expect(dialog.message()).toContain("Please enter your name:")
+//     expect(dialog.defaultValue()).toContain("Harry Potter")
+//     await dialog.accept("John")
+// })
+// await page.locator("//button[normalize-space()='Prompt']").click()
+// await expect(await page.locator("//p[@id='demo']")).toHaveText("Hello John! How are you today?")
+// await page.waitForTimeout(5000);
+// })

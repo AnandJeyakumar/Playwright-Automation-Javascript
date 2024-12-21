@@ -7,7 +7,6 @@ test:
   script:
     - npm install
     - npm run test -- --workers=4
-    - ls -R
   when: manual
   artifacts:
     when: always

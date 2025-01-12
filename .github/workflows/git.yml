@@ -1,0 +1,38 @@
+name: Playwright Test
+
+on:
+  push:
+    branches:
+      - main  # This will trigger the pipeline when code is pushed to the 'main' branch
+      - firstcommit
+  pull_request:
+    branches:
+      - main  # This will trigger the pipeline for pull requests targeting the 'main' branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # You can change this to another runner if needed
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Adjust this to your Node.js version
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run Playwright tests
+        run: |
+          npm run test -- --workers=4
+
+      - name: Upload Playwright report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 1  # Artifacts expire after 1 day
